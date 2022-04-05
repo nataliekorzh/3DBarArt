@@ -1,0 +1,756 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 600 600
+
+/square { 4 dict begin
+  /color exch def
+  /sw exch def 
+  /y exch def
+  /x exch def
+  x y translate
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw sub 0 sw add lineto % top left
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+end } def
+
+/left { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul sub 0 sw add moveto % top right 
+  0 sw add 0 sm add lineto % top right
+  0 sw add 0 sm sub lineto % bottom right
+  0 sw m mul sub 0 sw sub lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul sub 0 sw sub moveto % bottom right 
+  0 sw m mul sw 2 mul add sub 0 sw sub lineto % bottom left
+  0 sw m mul sw 2 mul add sub 0 sw add lineto % top left
+  0 sw m mul sub 0 sw add lineto % top right
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+   color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/right { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul add 0 sw add moveto % top left 
+  0 sw sub 0 sm add lineto % top left
+  0 sw sub 0 sm sub lineto % bottom left
+  0 sw m mul add 0 sw sub lineto % bottom left 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul add 0 sw sub moveto % bottom left 
+  0 sw m mul sw 2 mul add add 0 sw sub lineto % bottom right
+  0 sw m mul sw 2 mul add add 0 sw add lineto % top right
+  0 sw m mul add 0 sw add lineto % top left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/above { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul add moveto % top left 
+  0 sm sub 0 sw sub lineto % bottom left
+  0 sm add 0 sw sub lineto % bottom right
+  0 sw add 0 sw m mul add lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul add moveto % bottom right 
+  0 sw add 0 sw m mul sw 2 mul add add lineto % top right
+  0 sw sub 0 sw m mul sw 2 mul add add lineto % top left
+  0 sw sub 0 sw m mul add lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/below { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul sub moveto % top left 
+  0 sm sub 0 sw add lineto % top left
+  0 sm add 0 sw add lineto % top right
+  0 sw add 0 sw m mul sub lineto % top right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  newpath
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul sub moveto % top right 
+  0 sw add 0 sw m mul sw 2 mul add sub lineto % bottom right
+  0 sw sub 0 sw m mul sw 2 mul add sub lineto % bottom left
+  0 sw sub 0 sw m mul sub lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/top_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw sub moveto % bottom right
+  0 sw xm mul sub 0 sw ym mul add lineto % bottom right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul add moveto % bottom right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add lineto % top right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/top_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw sub moveto % bottom left
+  0 sw xm mul add 0 sw ym mul add lineto % bottom left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul add moveto % bottom left 
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add add lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left 
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw add moveto % top left
+  0 sw xm mul add 0 sw ym mul sub lineto % top left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul sub moveto % top left 
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  closepath
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw xm mul sub 0 sw ym mul sub lineto % top right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul sub moveto % top right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub lineto % top left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+270 552 0.8 6.72 3.72 4 255 top_left
+276 552 0.64 6.72 3.72 4 255 top_left
+282 552 3.72 4 6.72 255 above
+288 552 3.72 4 6.72 255 above
+294 552 3.72 4 6.72 255 above
+300 552 3.72 4 6.72 255 above
+306 552 3.72 4 6.72 255 above
+312 552 3.72 4 6.72 255 above
+318 552 3.72 4 6.72 255 above
+324 552 0.64 6.72 3.72 4 255 top_right
+330 552 0.8 6.72 3.72 4 255 top_right
+336 552 0.96 6.72 3.72 4 255 top_right
+342 552 1.12 6.72 3.72 4 255 top_right
+246 546 1.44 6.56 3.72 4 255 top_left
+252 546 1.28 6.56 3.72 4 255 top_left
+258 546 1.12 6.56 3.72 4 255 top_left
+264 546 0.96 6.56 3.72 4 255 top_left
+348 546 1.28 6.56 3.72 4 255 top_right
+354 546 1.44 6.56 3.72 4 255 top_right
+360 546 1.6 6.56 3.72 4 255 top_right
+366 546 1.76 6.56 3.72 4 255 top_right
+228 540 1.92 6.4 3.72 4 255 top_left
+234 540 1.76 6.4 3.72 4 255 top_left
+240 540 1.6 6.4 3.72 4 255 top_left
+372 540 1.92 6.4 3.72 4 255 top_right
+378 540 2.08 6.4 3.72 4 255 top_right
+384 540 2.24 6.4 3.72 4 255 top_right
+210 534 2.4 6.24 3.72 4 255 top_left
+216 534 2.24 6.24 3.72 4 255 top_left
+222 534 2.08 6.24 3.72 4 255 top_left
+390 534 2.4 6.24 3.72 4 255 top_right
+396 534 2.56 6.24 3.72 4 255 top_right
+402 534 2.72 6.24 3.72 4 255 top_right
+198 528 2.72 6.08 3.72 4 255 top_left
+204 528 2.56 6.08 3.72 4 255 top_left
+408 528 2.88 6.08 3.72 4 255 top_right
+414 528 3.04 6.08 3.72 4 255 top_right
+186 522 3.04 5.92 3.72 4 255 top_left
+192 522 2.88 5.92 3.72 4 255 top_left
+420 522 3.2 5.92 3.72 4 255 top_right
+426 522 3.36 5.92 3.72 4 255 top_right
+180 516 3.2 5.76 3.72 4 255 top_left
+432 516 3.52 5.76 3.72 4 255 top_right
+168 510 3.52 5.6 3.72 4 255 top_left
+174 510 3.36 5.6 3.72 4 255 top_left
+438 510 3.68 5.6 3.72 4 255 top_right
+444 510 3.84 5.6 3.72 4 255 top_right
+162 504 3.68 5.44 3.72 4 255 top_left
+450 504 4.0 5.44 3.72 4 255 top_right
+156 498 3.84 5.28 3.72 4 255 top_left
+456 498 4.16 5.28 3.72 4 255 top_right
+144 492 4.16 5.12 3.72 4 255 top_left
+150 492 4.0 5.12 3.72 4 255 top_left
+462 492 4.32 5.12 3.72 4 255 top_right
+468 492 4.48 5.12 3.72 4 255 top_right
+138 486 4.32 4.96 3.72 4 255 top_left
+474 486 4.64 4.96 3.72 4 255 top_right
+132 480 4.48 4.8 3.72 4 255 top_left
+480 480 4.8 4.8 3.72 4 255 top_right
+126 474 4.64 4.64 3.72 4 255 top_left
+486 474 4.96 4.64 3.72 4 255 top_right
+126 468 4.64 4.48 3.72 4 255 top_left
+486 468 4.96 4.48 3.72 4 255 top_right
+120 462 4.8 4.32 3.72 4 255 top_left
+492 462 5.12 4.32 3.72 4 255 top_right
+114 456 4.96 4.16 3.72 4 255 top_left
+198 456 2.72 4.16 3.72 4 255 top_left
+204 456 2.56 4.16 3.72 4 255 top_left
+210 456 2.4 4.16 3.72 4 255 top_left
+216 456 2.24 4.16 3.72 4 255 top_left
+222 456 2.08 4.16 3.72 4 255 top_left
+498 456 5.28 4.16 3.72 4 255 top_right
+108 450 5.12 4.0 3.72 4 255 top_left
+192 450 2.88 4.0 3.72 4 255 top_left
+228 450 1.92 4.0 3.72 4 255 top_left
+414 450 3.04 4.0 3.72 4 255 top_right
+420 450 3.2 4.0 3.72 4 255 top_right
+426 450 3.36 4.0 3.72 4 255 top_right
+432 450 3.52 4.0 3.72 4 255 top_right
+438 450 3.68 4.0 3.72 4 255 top_right
+504 450 5.44 4.0 3.72 4 255 top_right
+108 444 5.12 3.84 3.72 4 255 top_left
+186 444 3.04 3.84 3.72 4 255 top_left
+234 444 1.76 3.84 3.72 4 255 top_left
+408 444 2.88 3.84 3.72 4 255 top_right
+444 444 3.84 3.84 3.72 4 255 top_right
+504 444 5.44 3.84 3.72 4 255 top_right
+102 438 5.28 3.68 3.72 4 255 top_left
+180 438 3.2 3.68 3.72 4 255 top_left
+240 438 1.6 3.68 3.72 4 255 top_left
+402 438 2.72 3.68 3.72 4 255 top_right
+450 438 4.0 3.68 3.72 4 255 top_right
+510 438 5.6 3.68 3.72 4 255 top_right
+96 432 5.44 3.52 3.72 4 255 top_left
+174 432 3.36 3.52 3.72 4 255 top_left
+246 432 1.44 3.52 3.72 4 255 top_left
+396 432 2.56 3.52 3.72 4 255 top_right
+456 432 4.16 3.52 3.72 4 255 top_right
+516 432 5.76 3.52 3.72 4 255 top_right
+96 426 5.44 3.36 3.72 4 255 top_left
+174 426 3.36 3.36 3.72 4 255 top_left
+246 426 1.44 3.36 3.72 4 255 top_left
+390 426 2.4 3.36 3.72 4 255 top_right
+462 426 4.32 3.36 3.72 4 255 top_right
+516 426 5.76 3.36 3.72 4 255 top_right
+90 420 5.6 3.2 3.72 4 255 top_left
+174 420 3.36 3.2 3.72 4 255 top_left
+246 420 1.44 3.2 3.72 4 255 top_left
+390 420 2.4 3.2 3.72 4 255 top_right
+462 420 4.32 3.2 3.72 4 255 top_right
+522 420 5.92 3.2 3.72 4 255 top_right
+90 414 5.6 3.04 3.72 4 255 top_left
+174 414 3.36 3.04 3.72 4 255 top_left
+246 414 1.44 3.04 3.72 4 255 top_left
+390 414 2.4 3.04 3.72 4 255 top_right
+462 414 4.32 3.04 3.72 4 255 top_right
+522 414 5.92 3.04 3.72 4 255 top_right
+84 408 5.76 2.88 3.72 4 255 top_left
+174 408 3.36 2.88 3.72 4 255 top_left
+246 408 1.44 2.88 3.72 4 255 top_left
+390 408 2.4 2.88 3.72 4 255 top_right
+462 408 4.32 2.88 3.72 4 255 top_right
+528 408 6.08 2.88 3.72 4 255 top_right
+84 402 5.76 2.72 3.72 4 255 top_left
+180 402 3.2 2.72 3.72 4 255 top_left
+240 402 1.6 2.72 3.72 4 255 top_left
+390 402 2.4 2.72 3.72 4 255 top_right
+462 402 4.32 2.72 3.72 4 255 top_right
+528 402 6.08 2.72 3.72 4 255 top_right
+84 396 5.76 2.56 3.72 4 255 top_left
+186 396 3.04 2.56 3.72 4 255 top_left
+234 396 1.76 2.56 3.72 4 255 top_left
+396 396 2.56 2.56 3.72 4 255 top_right
+456 396 4.16 2.56 3.72 4 255 top_right
+528 396 6.08 2.56 3.72 4 255 top_right
+78 390 5.92 2.4 3.72 4 255 top_left
+192 390 2.88 2.4 3.72 4 255 top_left
+228 390 1.92 2.4 3.72 4 255 top_left
+402 390 2.72 2.4 3.72 4 255 top_right
+450 390 4.0 2.4 3.72 4 255 top_right
+534 390 6.24 2.4 3.72 4 255 top_right
+78 384 5.92 2.24 3.72 4 255 top_left
+198 384 2.72 2.24 3.72 4 255 top_left
+204 384 2.56 2.24 3.72 4 255 top_left
+210 384 2.4 2.24 3.72 4 255 top_left
+216 384 2.24 2.24 3.72 4 255 top_left
+222 384 2.08 2.24 3.72 4 255 top_left
+408 384 2.88 2.24 3.72 4 255 top_right
+444 384 3.84 2.24 3.72 4 255 top_right
+534 384 6.24 2.24 3.72 4 255 top_right
+78 378 5.92 2.08 3.72 4 255 top_left
+414 378 3.04 2.08 3.72 4 255 top_right
+420 378 3.2 2.08 3.72 4 255 top_right
+426 378 3.36 2.08 3.72 4 255 top_right
+432 378 3.52 2.08 3.72 4 255 top_right
+438 378 3.68 2.08 3.72 4 255 top_right
+534 378 6.24 2.08 3.72 4 255 top_right
+72 372 6.08 1.92 3.72 4 255 top_left
+540 372 6.4 1.92 3.72 4 255 top_right
+72 366 6.08 1.76 3.72 4 255 top_left
+540 366 6.4 1.76 3.72 4 255 top_right
+72 360 6.08 1.6 3.72 4 255 top_left
+540 360 6.4 1.6 3.72 4 255 top_right
+72 354 6.08 1.44 3.72 4 255 top_left
+540 354 6.4 1.44 3.72 4 255 top_right
+66 348 6.24 1.28 3.72 4 255 top_left
+546 348 6.56 1.28 3.72 4 255 top_right
+66 342 6.24 1.12 3.72 4 255 top_left
+276 342 0.64 1.12 3.72 4 255 top_left
+546 342 6.56 1.12 3.72 4 255 top_right
+66 336 6.24 0.96 3.72 4 255 top_left
+276 336 0.64 0.96 3.72 4 255 top_left
+282 336 3.72 4 0.96 255 above
+336 336 0.96 0.96 3.72 4 255 top_right
+546 336 6.56 0.96 3.72 4 255 top_right
+66 330 6.24 0.8 3.72 4 255 top_left
+282 330 3.72 4 0.8 255 above
+330 330 0.8 0.8 3.72 4 255 top_right
+336 330 0.96 0.8 3.72 4 255 top_right
+546 330 6.56 0.8 3.72 4 255 top_right
+66 324 6.24 0.64 3.72 4 255 top_left
+282 324 3.72 4 0.64 255 above
+288 324 3.72 4 0.64 255 above
+330 324 0.8 0.64 3.72 4 255 top_right
+546 324 6.56 0.64 3.72 4 255 top_right
+66 318 3.72 4 6.24 255 left
+288 318 3.72 4 0.48 255 above
+324 318 3.72 4 0.64 255 right
+330 318 3.72 4 0.8 255 right
+546 318 3.72 4 6.56 255 right
+66 312 3.72 4 6.24 255 left
+288 312 3.72 4 0.32 255 above
+294 312 3.72 4 0.32 255 above
+318 312 3.72 4 0.32 255 above
+324 312 3.72 4 0.64 255 right
+546 312 3.72 4 6.56 255 right
+66 306 3.72 4 6.24 255 left
+294 306 3.72 4 0.16 255 above
+312 306 3.72 4 0.16 255 above
+318 306 3.72 4 0.16 255 above
+546 306 3.72 4 6.56 255 right
+66 300 3.72 4 6.24 255 left
+300 300 3.72 4 0.0 255 below
+306 300 3.72 4 0.0 255 below
+312 300 3.72 4 0.0 255 below
+546 300 3.72 4 6.56 255 right
+66 294 3.72 4 6.24 255 left
+306 294 3.72 4 0.16 255 below
+546 294 3.72 4 6.56 255 right
+66 288 3.72 4 6.24 255 left
+546 288 3.72 4 6.56 255 right
+66 282 3.72 4 6.24 255 left
+546 282 3.72 4 6.56 255 right
+66 276 6.24 0.64 3.72 4 255 bottom_left
+546 276 6.56 0.64 3.72 4 255 bottom_right
+72 270 6.08 0.8 3.72 4 255 bottom_left
+540 270 6.4 0.8 3.72 4 255 bottom_right
+72 264 6.08 0.96 3.72 4 255 bottom_left
+540 264 6.4 0.96 3.72 4 255 bottom_right
+72 258 6.08 1.12 3.72 4 255 bottom_left
+540 258 6.4 1.12 3.72 4 255 bottom_right
+72 252 6.08 1.28 3.72 4 255 bottom_left
+174 252 3.36 1.28 3.72 4 255 bottom_left
+540 252 6.4 1.28 3.72 4 255 bottom_right
+78 246 5.92 1.44 3.72 4 255 bottom_left
+174 246 3.36 1.44 3.72 4 255 bottom_left
+534 246 6.24 1.44 3.72 4 255 bottom_right
+78 240 5.92 1.6 3.72 4 255 bottom_left
+174 240 3.36 1.6 3.72 4 255 bottom_left
+180 240 3.2 1.6 3.72 4 255 bottom_left
+426 240 3.36 1.6 3.72 4 255 bottom_right
+432 240 3.52 1.6 3.72 4 255 bottom_right
+534 240 6.24 1.6 3.72 4 255 bottom_right
+78 234 5.92 1.76 3.72 4 255 bottom_left
+180 234 3.2 1.76 3.72 4 255 bottom_left
+426 234 3.36 1.76 3.72 4 255 bottom_right
+534 234 6.24 1.76 3.72 4 255 bottom_right
+84 228 5.76 1.92 3.72 4 255 bottom_left
+186 228 3.04 1.92 3.72 4 255 bottom_left
+420 228 3.2 1.92 3.72 4 255 bottom_right
+426 228 3.36 1.92 3.72 4 255 bottom_right
+528 228 6.08 1.92 3.72 4 255 bottom_right
+84 222 5.76 2.08 3.72 4 255 bottom_left
+186 222 3.04 2.08 3.72 4 255 bottom_left
+192 222 2.88 2.08 3.72 4 255 bottom_left
+420 222 3.2 2.08 3.72 4 255 bottom_right
+528 222 6.08 2.08 3.72 4 255 bottom_right
+84 216 5.76 2.24 3.72 4 255 bottom_left
+192 216 2.88 2.24 3.72 4 255 bottom_left
+198 216 2.72 2.24 3.72 4 255 bottom_left
+414 216 3.04 2.24 3.72 4 255 bottom_right
+420 216 3.2 2.24 3.72 4 255 bottom_right
+528 216 6.08 2.24 3.72 4 255 bottom_right
+90 210 5.6 2.4 3.72 4 255 bottom_left
+198 210 2.72 2.4 3.72 4 255 bottom_left
+408 210 2.88 2.4 3.72 4 255 bottom_right
+522 210 5.92 2.4 3.72 4 255 bottom_right
+90 204 5.6 2.56 3.72 4 255 bottom_left
+204 204 2.56 2.56 3.72 4 255 bottom_left
+210 204 2.4 2.56 3.72 4 255 bottom_left
+402 204 2.72 2.56 3.72 4 255 bottom_right
+522 204 5.92 2.56 3.72 4 255 bottom_right
+96 198 5.44 2.72 3.72 4 255 bottom_left
+210 198 2.4 2.72 3.72 4 255 bottom_left
+216 198 2.24 2.72 3.72 4 255 bottom_left
+396 198 2.56 2.72 3.72 4 255 bottom_right
+516 198 5.76 2.72 3.72 4 255 bottom_right
+96 192 5.44 2.88 3.72 4 255 bottom_left
+216 192 2.24 2.88 3.72 4 255 bottom_left
+222 192 2.08 2.88 3.72 4 255 bottom_left
+228 192 1.92 2.88 3.72 4 255 bottom_left
+390 192 2.4 2.88 3.72 4 255 bottom_right
+516 192 5.76 2.88 3.72 4 255 bottom_right
+102 186 5.28 3.04 3.72 4 255 bottom_left
+228 186 1.92 3.04 3.72 4 255 bottom_left
+234 186 1.76 3.04 3.72 4 255 bottom_left
+378 186 2.08 3.04 3.72 4 255 bottom_right
+384 186 2.24 3.04 3.72 4 255 bottom_right
+510 186 5.6 3.04 3.72 4 255 bottom_right
+108 180 5.12 3.2 3.72 4 255 bottom_left
+240 180 1.6 3.2 3.72 4 255 bottom_left
+246 180 1.44 3.2 3.72 4 255 bottom_left
+372 180 1.92 3.2 3.72 4 255 bottom_right
+378 180 2.08 3.2 3.72 4 255 bottom_right
+504 180 5.44 3.2 3.72 4 255 bottom_right
+108 174 5.12 3.36 3.72 4 255 bottom_left
+252 174 1.28 3.36 3.72 4 255 bottom_left
+258 174 1.12 3.36 3.72 4 255 bottom_left
+366 174 1.76 3.36 3.72 4 255 bottom_right
+504 174 5.44 3.36 3.72 4 255 bottom_right
+114 168 4.96 3.52 3.72 4 255 bottom_left
+264 168 0.96 3.52 3.72 4 255 bottom_left
+270 168 0.8 3.52 3.72 4 255 bottom_left
+276 168 0.64 3.52 3.72 4 255 bottom_left
+282 168 3.72 4 3.52 255 below
+354 168 1.44 3.52 3.72 4 255 bottom_right
+360 168 1.6 3.52 3.72 4 255 bottom_right
+366 168 1.76 3.52 3.72 4 255 bottom_right
+498 168 5.28 3.52 3.72 4 255 bottom_right
+120 162 4.8 3.68 3.72 4 255 bottom_left
+282 162 3.72 4 3.68 255 below
+288 162 3.72 4 3.68 255 below
+294 162 3.72 4 3.68 255 below
+300 162 3.72 4 3.68 255 below
+306 162 3.72 4 3.68 255 below
+342 162 1.12 3.68 3.72 4 255 bottom_right
+348 162 1.28 3.68 3.72 4 255 bottom_right
+354 162 1.44 3.68 3.72 4 255 bottom_right
+492 162 5.12 3.68 3.72 4 255 bottom_right
+126 156 4.64 3.84 3.72 4 255 bottom_left
+312 156 3.72 4 3.84 255 below
+318 156 3.72 4 3.84 255 below
+324 156 0.64 3.84 3.72 4 255 bottom_right
+330 156 0.8 3.84 3.72 4 255 bottom_right
+336 156 0.96 3.84 3.72 4 255 bottom_right
+486 156 4.96 3.84 3.72 4 255 bottom_right
+126 150 4.64 4.0 3.72 4 255 bottom_left
+486 150 4.96 4.0 3.72 4 255 bottom_right
+132 144 4.48 4.16 3.72 4 255 bottom_left
+480 144 4.8 4.16 3.72 4 255 bottom_right
+138 138 4.32 4.32 3.72 4 255 bottom_left
+474 138 4.64 4.32 3.72 4 255 bottom_right
+144 132 4.16 4.48 3.72 4 255 bottom_left
+150 132 4.0 4.48 3.72 4 255 bottom_left
+462 132 4.32 4.48 3.72 4 255 bottom_right
+468 132 4.48 4.48 3.72 4 255 bottom_right
+156 126 3.84 4.64 3.72 4 255 bottom_left
+456 126 4.16 4.64 3.72 4 255 bottom_right
+162 120 3.68 4.8 3.72 4 255 bottom_left
+450 120 4.0 4.8 3.72 4 255 bottom_right
+168 114 3.52 4.96 3.72 4 255 bottom_left
+174 114 3.36 4.96 3.72 4 255 bottom_left
+438 114 3.68 4.96 3.72 4 255 bottom_right
+444 114 3.84 4.96 3.72 4 255 bottom_right
+180 108 3.2 5.12 3.72 4 255 bottom_left
+432 108 3.52 5.12 3.72 4 255 bottom_right
+186 102 3.04 5.28 3.72 4 255 bottom_left
+192 102 2.88 5.28 3.72 4 255 bottom_left
+420 102 3.2 5.28 3.72 4 255 bottom_right
+426 102 3.36 5.28 3.72 4 255 bottom_right
+198 96 2.72 5.44 3.72 4 255 bottom_left
+204 96 2.56 5.44 3.72 4 255 bottom_left
+408 96 2.88 5.44 3.72 4 255 bottom_right
+414 96 3.04 5.44 3.72 4 255 bottom_right
+210 90 2.4 5.6 3.72 4 255 bottom_left
+216 90 2.24 5.6 3.72 4 255 bottom_left
+222 90 2.08 5.6 3.72 4 255 bottom_left
+390 90 2.4 5.6 3.72 4 255 bottom_right
+396 90 2.56 5.6 3.72 4 255 bottom_right
+402 90 2.72 5.6 3.72 4 255 bottom_right
+228 84 1.92 5.76 3.72 4 255 bottom_left
+234 84 1.76 5.76 3.72 4 255 bottom_left
+240 84 1.6 5.76 3.72 4 255 bottom_left
+372 84 1.92 5.76 3.72 4 255 bottom_right
+378 84 2.08 5.76 3.72 4 255 bottom_right
+384 84 2.24 5.76 3.72 4 255 bottom_right
+246 78 1.44 5.92 3.72 4 255 bottom_left
+252 78 1.28 5.92 3.72 4 255 bottom_left
+258 78 1.12 5.92 3.72 4 255 bottom_left
+264 78 0.96 5.92 3.72 4 255 bottom_left
+348 78 1.28 5.92 3.72 4 255 bottom_right
+354 78 1.44 5.92 3.72 4 255 bottom_right
+360 78 1.6 5.92 3.72 4 255 bottom_right
+366 78 1.76 5.92 3.72 4 255 bottom_right
+270 72 0.8 6.08 3.72 4 255 bottom_left
+276 72 0.64 6.08 3.72 4 255 bottom_left
+282 72 3.72 4 6.08 255 below
+288 72 3.72 4 6.08 255 below
+294 72 3.72 4 6.08 255 below
+300 72 3.72 4 6.08 255 below
+306 72 3.72 4 6.08 255 below
+312 72 3.72 4 6.08 255 below
+318 72 3.72 4 6.08 255 below
+324 72 0.64 6.08 3.72 4 255 bottom_right
+330 72 0.8 6.08 3.72 4 255 bottom_right
+336 72 0.96 6.08 3.72 4 255 bottom_right
+342 72 1.12 6.08 3.72 4 255 bottom_right
+showpage

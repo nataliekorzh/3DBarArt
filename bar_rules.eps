@@ -1,0 +1,401 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 400 400
+
+200 200 translate
+
+/square { 4 dict begin
+  /color exch def
+  /sw exch def 
+  /y exch def
+  /x exch def
+  x y translate
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw sub 0 sw add lineto % top left
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+end } def
+
+/left { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul sub 0 sw add moveto % top right 
+  0 sw add 0 sm add lineto % top right
+  0 sw add 0 sm sub lineto % bottom right
+  0 sw m mul sub 0 sw sub lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul sub 0 sw sub moveto % bottom right 
+  0 sw m mul sw 2 mul add sub 0 sw sub lineto % bottom left
+  0 sw m mul sw 2 mul add sub 0 sw add lineto % top left
+  0 sw m mul sub 0 sw add lineto % top right
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  x neg y neg translate
+end } def
+
+/right { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul add 0 sw add moveto % top left 
+  0 sw sub 0 sm add lineto % top left
+  0 sw sub 0 sm sub lineto % bottom left
+  0 sw m mul add 0 sw sub lineto % bottom left 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul add 0 sw sub moveto % bottom left 
+  0 sw m mul sw 2 mul add add 0 sw sub lineto % bottom right
+  0 sw m mul sw 2 mul add add 0 sw add lineto % top right
+  0 sw m mul add 0 sw add lineto % top left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  x neg y neg translate
+end } def
+
+/above { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul add moveto % top left 
+  0 sm sub 0 sw sub lineto % bottom left
+  0 sm add 0 sw sub lineto % bottom right
+  0 sw add 0 sw m mul add lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul add moveto % bottom right 
+  0 sw add 0 sw m mul sw 2 mul add add lineto % top right
+  0 sw sub 0 sw m mul sw 2 mul add add lineto % top left
+  0 sw sub 0 sw m mul add lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  x neg y neg translate
+end } def
+
+/below { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul sub moveto % top left 
+  0 sm sub 0 sw add lineto % top left
+  0 sm add 0 sw add lineto % top right
+  0 sw add 0 sw m mul sub lineto % top right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  newpath
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul sub moveto % top right 
+  0 sw add 0 sw m mul sw 2 mul add sub lineto % bottom right
+  0 sw sub 0 sw m mul sw 2 mul add sub lineto % bottom left
+  0 sw sub 0 sw m mul sub lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  x neg y neg translate
+end } def
+
+/top_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left 
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw sub moveto % bottom right
+  0 sw xm mul sub 0 sw ym mul add lineto % bottom right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul add moveto % bottom right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add lineto % top right
+  closepath
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+ x neg y neg translate
+end } def
+
+/top_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw sub moveto % bottom left
+  0 sw xm mul add 0 sw ym mul add lineto % bottom left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul add moveto % bottom left 
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add add lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left 
+  closepath
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw add moveto % top left
+  0 sw xm mul add 0 sw ym mul sub lineto % top left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul sub moveto % top left 
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  closepath
+  closepath
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw xm mul sub 0 sw ym mul sub lineto % top right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul sub moveto % top right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub lineto % top left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color color color setrgbcolor
+  fill
+
+ x neg y neg translate
+end } def
+
+newpath
+-200 200 moveto
+200 200 lineto
+200 -200 lineto
+-200 -200 lineto
+closepath
+255 setgray
+fill
+
+255 255 255 setrgbcolor
+50 3 3.75 4 10 255 right
+-50 3 3.75 4 4 255 left
+3 50 3.75 4 1 255 above
+3 -50 3.75 4 10 255 below
+-50 50 9 6 3.75 4 255 top_left
+50 50 6 10 3.75 4 255 top_right
+50 -50 9 1 3.75 4 255 bottom_right
+-50 -50 10 3 3.75 4 255 bottom_left
+3 3 4 255 square
+
+showpage

@@ -1,0 +1,481 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 400 400
+
+200.0 200.0 translate
+
+/square { 4 dict begin
+  /color exch def
+  /sw exch def 
+  /y exch def
+  /x exch def
+  x y translate
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw sub 0 sw add lineto % top left
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+end } def
+
+/left { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul sub 0 sw add moveto % top right 
+  0 sw add 0 sm add lineto % top right
+  0 sw add 0 sm sub lineto % bottom right
+  0 sw m mul sub 0 sw sub lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul sub 0 sw sub moveto % bottom right 
+  0 sw m mul sw 2 mul add sub 0 sw sub lineto % bottom left
+  0 sw m mul sw 2 mul add sub 0 sw add lineto % top left
+  0 sw m mul sub 0 sw add lineto % top right
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+   color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/right { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul add 0 sw add moveto % top left 
+  0 sw sub 0 sm add lineto % top left
+  0 sw sub 0 sm sub lineto % bottom left
+  0 sw m mul add 0 sw sub lineto % bottom left 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul add 0 sw sub moveto % bottom left 
+  0 sw m mul sw 2 mul add add 0 sw sub lineto % bottom right
+  0 sw m mul sw 2 mul add add 0 sw add lineto % top right
+  0 sw m mul add 0 sw add lineto % top left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/above { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul add moveto % top left 
+  0 sm sub 0 sw sub lineto % bottom left
+  0 sm add 0 sw sub lineto % bottom right
+  0 sw add 0 sw m mul add lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul add moveto % bottom right 
+  0 sw add 0 sw m mul sw 2 mul add add lineto % top right
+  0 sw sub 0 sw m mul sw 2 mul add add lineto % top left
+  0 sw sub 0 sw m mul add lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/below { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul sub moveto % top left 
+  0 sm sub 0 sw add lineto % top left
+  0 sm add 0 sw add lineto % top right
+  0 sw add 0 sw m mul sub lineto % top right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  newpath
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul sub moveto % top right 
+  0 sw add 0 sw m mul sw 2 mul add sub lineto % bottom right
+  0 sw sub 0 sw m mul sw 2 mul add sub lineto % bottom left
+  0 sw sub 0 sw m mul sub lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/top_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw sub moveto % bottom right
+  0 sw xm mul sub 0 sw ym mul add lineto % bottom right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul add moveto % bottom right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add lineto % top right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/top_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw sub moveto % bottom left
+  0 sw xm mul add 0 sw ym mul add lineto % bottom left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul add moveto % bottom left 
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add add lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left 
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw add moveto % top left
+  0 sw xm mul add 0 sw ym mul sub lineto % top left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul sub moveto % top left 
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  closepath
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw xm mul sub 0 sw ym mul sub lineto % top right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul sub moveto % top right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub lineto % top left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+-105.68405473039033 62.07279029978912 6.605253420649396 3.87954939373682 1.86 2 255 top_left
+-114.89114414755569 158.4963239161259 7.180696509222232 9.906020244757869 1.86 2 255 top_left
+-152.72175371633384 -4.140534219140932 1.86 2 9.545109607270865 255 left
+-151.6206755386583 14.635590031154464 1.86 2 9.476292221166144 255 left
+-154.3292495111534 4.894116976087702 1.86 2 9.645578094447087 255 left
+2.790352780987206 -8.899321305986518 2 255 square
+-5.655092616003088 -74.01833827871653 1.86 2 4.626146142419783 255 below
+-122.88389455489593 -23.31947019092209 1.86 2 7.680243409680996 255 left
+-71.4836508966425 61.714689090899356 4.467728181040156 3.8571680681812097 1.86 2 255 top_left
+46.25925986743931 -96.45381020512926 2.891203741714957 6.028363137820579 1.86 2 255 bottom_right
+-50.330680545367244 -94.13080463265707 3.1456675340854527 5.883175289541067 1.86 2 255 bottom_left
+-51.843450965645985 154.0987224671486 3.2402156853528736 9.631170154196788 1.86 2 255 top_left
+72.81922206638811 -6.6684797393092765 1.86 2 4.551201379149257 255 right
+38.64173580459931 -63.24390454165197 2.4151084877874567 3.9527440338532487 1.86 2 255 bottom_right
+117.55293765330634 120.9051257272314 7.3470586033316465 7.556570357951962 1.86 2 255 top_right
+135.8389730743536 -100.48809707378517 8.4899358171471 6.280506067111573 1.86 2 255 bottom_right
+-123.99905751987933 102.10506506451969 7.749941094992458 6.381566566532481 1.86 2 255 top_left
+11.971930403166766 -110.41979482931151 1.86 2 6.90123717683197 255 below
+119.46174400671009 150.2566499474413 7.466359000419381 9.391040621715081 1.86 2 255 top_right
+-47.17898629252193 71.56879435212997 2.9486866432826204 4.473049647008123 1.86 2 255 top_left
+-91.29227924303225 -22.23736359792983 1.86 2 5.705767452689516 255 left
+-80.94332488083796 -1.7275859052010674 1.86 2 5.058957805052373 255 left
+-106.43036192222503 -88.25237544363176 6.6518976201390645 5.515773465226985 1.86 2 255 bottom_left
+141.46604365079315 -49.89415202961048 8.841627728174572 3.118384501850655 1.86 2 255 bottom_right
+-67.23931210532143 -51.98054403268927 4.2024570065825895 3.2487840020430796 1.86 2 255 bottom_left
+122.65539777384811 105.10996199383408 7.665962360865507 6.56937262461463 1.86 2 255 top_right
+86.62920119894267 -156.7959735925081 5.414325074933917 9.799748349531756 1.86 2 255 bottom_right
+94.32846743768337 131.25360379307523 5.895529214855211 8.203350237067202 1.86 2 255 top_right
+-34.34187524091752 10.303553018421951 1.86 2 2.146367202557345 255 left
+-69.23798826046638 33.12835537347485 4.327374266279149 2.070522210842178 1.86 2 255 top_left
+64.54901029740714 8.738956110318696 1.86 2 4.034313143587946 255 right
+-159.76644017847042 104.96618132229099 9.985402511154401 6.560386332643188 1.86 2 255 top_left
+153.18835824362753 34.48582375573358 9.57427239022672 2.1553639847333486 1.86 2 255 top_right
+-9.906094933753366 126.33169597681837 1.86 2 7.895730998551147 255 above
+87.51843996093402 -9.147252155366516 1.86 2 5.469902497558376 255 right
+-44.57780832568169 95.82081249072684 2.7861130203551054 5.988800780670427 1.86 2 255 top_left
+-34.0959589823409 120.83386285396682 2.1309974363963065 7.552116428372926 1.86 2 255 top_left
+-5.786171994080121 23.421126727073272 2 255 square
+-35.42847321909555 -31.140639536384242 2.214279576193472 1.9462899710240151 1.86 2 255 bottom_left
+-56.69964065824627 51.64368947583404 3.5437275411403917 3.2277305922396273 1.86 2 255 top_left
+103.02658542789152 -83.48764708276114 6.43916158924322 5.217977942672571 1.86 2 255 bottom_right
+119.66293710454659 -4.824900909073335 1.86 2 7.478933569034162 255 right
+-92.7144749374056 -47.58689269543058 5.79465468358785 2.974180793464411 1.86 2 255 bottom_left
+-80.46405698150619 121.71281519599472 5.029003561344137 7.60705094974967 1.86 2 255 top_left
+16.955300498491738 -85.9737807747781 1.86 2 5.373361298423632 255 below
+-62.521112926251476 137.00614265323975 3.9075695578907172 8.562883915827484 1.86 2 255 top_left
+130.39980604960357 20.776455431483924 1.86 2 8.149987878100223 255 right
+-143.202680162634 -67.17360686950744 8.950167510164626 4.198350429344215 1.86 2 255 bottom_left
+-57.42624617857793 0.15389272974488222 1.86 2 3.5891403861611204 255 left
+-36.75034925032162 -2.934286214823487 1.86 2 2.296896828145101 255 left
+-76.89858871210348 -14.20967651235398 1.86 2 4.806161794506467 255 left
+-157.00398511498219 -89.59158073122123 9.812749069686387 5.599473795701327 1.86 2 255 bottom_left
+64.2374753781422 48.66473351927044 4.014842211133887 3.0415458449544026 1.86 2 255 top_right
+21.411858681289885 -107.32016918771367 1.86 2 6.707510574232105 255 below
+-9.005879308242982 1.2358174042437895 2 255 square
+61.2067517646945 5.3856248871446155 1.86 2 3.8254219852934064 255 right
+159.46512585749076 41.2231048052642 9.966570366093173 2.5764440503290125 1.86 2 255 top_right
+-56.74507345687016 123.24703351890588 3.546567091054385 7.702939594931618 1.86 2 255 top_left
+46.77640853238532 -139.18529096927125 2.9235255332740824 8.699080685579453 1.86 2 255 bottom_right
+-29.748950928290924 -0.6251121629967997 1.86 2 1.8593094330181827 255 left
+-26.866997151132665 -76.09921535943968 1.86 2 4.75620095996498 255 below
+-41.37847392549827 138.39171482423455 2.586154620343642 8.64948217651466 1.86 2 255 top_left
+131.45174070761277 16.611162110892735 1.86 2 8.215733794225798 255 right
+59.0624496580441 -42.97457404841768 3.6914031036277564 2.685910878026105 1.86 2 255 bottom_right
+-17.8298888720862 59.013169474573886 1.86 2 3.688323092160868 255 above
+21.42742121742623 14.592413341564622 2 255 square
+-139.84180916293656 9.364572041356809 1.86 2 8.740113072683535 255 left
+130.83841826733078 135.1840995124212 8.177401141708174 8.449006219526325 1.86 2 255 top_right
+-34.22197388943684 57.40113823261578 2.1388733680898024 3.587571139538486 1.86 2 255 top_left
+-70.30204690401985 105.50623268590107 4.39387793150124 6.594139542868817 1.86 2 255 top_left
+-92.58745740443271 -124.51852440644896 5.7867160877770445 7.78240777540306 1.86 2 255 bottom_left
+-151.3226681498768 -13.432106160846644 1.86 2 9.4576667593673 255 left
+134.57080329007852 28.100200804312976 8.410675205629907 1.756262550269561 1.86 2 255 top_right
+-47.480694514225235 80.27382650987079 2.967543407139077 5.017114156866924 1.86 2 255 top_left
+-2.2603196950629183 41.02876681670509 1.86 2 2.564297926044068 255 above
+-20.635944630904675 88.77553863522684 1.86 2 5.548471164701677 255 above
+-159.2891837371094 86.02723810000117 9.955573983569337 5.376702381250073 1.86 2 255 top_left
+-133.1158868770549 -119.14682810401665 8.31974292981593 7.44667675650104 1.86 2 255 bottom_left
+154.5040337807739 2.1006081375100507 1.86 2 9.65650211129837 255 right
+88.4173914198058 26.378430332591165 1.86 2 5.526086963737862 255 right
+-90.61169900014669 82.46021459481028 5.663231187509168 5.153763412175643 1.86 2 255 top_left
+-79.1372564065037 -70.58210678079156 4.946078525406481 4.411381673799473 1.86 2 255 bottom_left
+72.57269559179622 139.890409652909 4.535793474487264 8.743150603306812 1.86 2 255 top_right
+-3.0428881120949995 59.29366473855271 1.86 2 3.705854046159544 255 above
+-95.19927475963885 -95.68515667113857 5.949954672477428 5.980322291946161 1.86 2 255 bottom_left
+114.11528065260512 -28.57023798146625 7.132205040787821 1.7856398738416406 1.86 2 255 bottom_right
+33.64876963740059 70.27035626703696 2.103048102337537 4.39189726668981 1.86 2 255 top_right
+-148.2168510451877 -52.386517998098654 9.263553190324231 3.274157374881166 1.86 2 255 bottom_left
+115.1173446455316 -32.608886416068515 7.194834040345725 2.038055401004282 1.86 2 255 bottom_right
+2.463319988485779 81.87194024943014 1.86 2 5.116996265589384 255 above
+72.6639980633393 -26.307034715893224 1.86 2 4.541499878958707 255 right
+-152.924046761822 -95.86454815838287 9.557752922613876 5.99153425989893 1.86 2 255 bottom_left
+67.31586593564589 89.56570562924068 4.207241620977868 5.597856601827543 1.86 2 255 top_right
+-152.5201728020966 -66.04202343642918 9.532510800131037 4.1276264647768235 1.86 2 255 bottom_left
+15.741142494335804 -131.94045710420826 1.86 2 8.246278569013016 255 below
+-70.75690853227968 -130.16491636728827 4.42230678326748 8.135307272955517 1.86 2 255 bottom_left
+10.591796686991984 -7.411028140463316 2 255 square
+-28.76273596051044 -104.19427372517134 1.7976709975319025 6.512142107823209 1.86 2 255 bottom_left
+-79.10993546820215 106.78448773197772 4.9443709667626345 6.6740304832486075 1.86 2 255 top_left
+-63.10494853461648 5.128411016043174 1.86 2 3.94405928341353 255 left
+showpage

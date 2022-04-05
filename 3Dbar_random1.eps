@@ -1,0 +1,421 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 400 400
+
+200.0 200.0 translate
+
+/square { 4 dict begin
+  /color exch def
+  /sw exch def 
+  /y exch def
+  /x exch def
+  x y translate
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw sub 0 sw add lineto % top left
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+end } def
+
+/left { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul sub 0 sw add moveto % top right 
+  0 sw add 0 sm add lineto % top right
+  0 sw add 0 sm sub lineto % bottom right
+  0 sw m mul sub 0 sw sub lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul sub 0 sw sub moveto % bottom right 
+  0 sw m mul sw 2 mul add sub 0 sw sub lineto % bottom left
+  0 sw m mul sw 2 mul add sub 0 sw add lineto % top left
+  0 sw m mul sub 0 sw add lineto % top right
+  closepath
+  0 0 0 setrgbcolor
+  gsave
+  stroke
+  grestore
+   color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/right { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw m mul add 0 sw add moveto % top left 
+  0 sw sub 0 sm add lineto % top left
+  0 sw sub 0 sm sub lineto % bottom left
+  0 sw m mul add 0 sw sub lineto % bottom left 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw m mul add 0 sw sub moveto % bottom left 
+  0 sw m mul sw 2 mul add add 0 sw sub lineto % bottom right
+  0 sw m mul sw 2 mul add add 0 sw add lineto % top right
+  0 sw m mul add 0 sw add lineto % top left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/above { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul add moveto % top left 
+  0 sm sub 0 sw sub lineto % bottom left
+  0 sm add 0 sw sub lineto % bottom right
+  0 sw add 0 sw m mul add lineto % bottom right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul add moveto % bottom right 
+  0 sw add 0 sw m mul sw 2 mul add add lineto % top right
+  0 sw sub 0 sw m mul sw 2 mul add add lineto % top left
+  0 sw sub 0 sw m mul add lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/below { 6 dict begin
+  /color exch def
+  /m exch def
+  /sw exch def
+  /sm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0.5 setlinewidth
+  newpath
+  0 sw sub 0 sw m mul sub moveto % top left 
+  0 sm sub 0 sw add lineto % top left
+  0 sm add 0 sw add lineto % top right
+  0 sw add 0 sw m mul sub lineto % top right 
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  newpath
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw add 0 sw m mul sub moveto % top right 
+  0 sw add 0 sw m mul sw 2 mul add sub lineto % bottom right
+  0 sw sub 0 sw m mul sw 2 mul add sub lineto % bottom left
+  0 sw sub 0 sw m mul sub lineto % bottom left
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  stroke
+  grestore
+  color setgray
+  fill
+
+  x neg y neg translate
+end } def
+
+/top_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw sub moveto % bottom right
+  0 sw xm mul sub 0 sw ym mul add lineto % bottom right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul add moveto % bottom right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul add lineto % bottom left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add add lineto % top right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/top_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw sub moveto % bottom left
+  0 sw xm mul add 0 sw ym mul add lineto % bottom left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul add moveto % bottom left 
+  0 sw xm mul add 0 sw ym mul sw 2 mul add add lineto % top left
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add add lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul add lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_right { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub moveto % top right 
+  0 sw add 0 sw add lineto % top right
+  0 sw sub 0 sw add lineto % top left
+  0 sw sub 0 sw sub lineto % bottom left
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left 
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw sub 0 sw add moveto % top left
+  0 sw xm mul add 0 sw ym mul sub lineto % top left 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul add 0 sw ym mul sub moveto % top left 
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sub lineto % top right
+  0 sw xm mul sw 2 mul add add 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  0 sw xm mul add 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  closepath
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+/bottom_left { 7 dict begin
+  /color exch def
+  /sw exch def
+  /sm exch def
+  /ym exch def
+  /xm exch def
+  /y exch def
+  /x exch def
+  x y translate
+
+  0 0 0 setrgbcolor
+  0.5 setlinewidth
+  newpath
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub moveto % top left 
+  0 sw sub 0 sw add lineto % top left
+  0 sw add 0 sw add lineto % top right
+  0 sw add 0 sw sub lineto % bottom right
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right 
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+  0 0 0 setrgbcolor
+  newpath
+  0 sw add 0 sw add moveto % top right
+  0 sw xm mul sub 0 sw ym mul sub lineto % top right 
+  stroke 
+
+  1.25 setlinewidth
+  1 setlinejoin
+  newpath
+  0 sw xm mul sub 0 sw ym mul sub moveto % top right 
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sub lineto % top left
+  0 sw xm mul sw 2 mul add sub 0 sw ym mul sw 2 mul add sub lineto % bottom left
+  0 sw xm mul sub 0 sw ym mul sw 2 mul add sub lineto % bottom right
+  closepath
+  gsave
+  stroke
+  grestore
+  color setgray
+  fill
+
+ x neg y neg translate
+end } def
+
+-115.60126078852744 -152.1107930179104 7.225078799282966 9.5069245636194 3.72 4 255 bottom_left
+-96.27803655013591 49.30138307625103 6.017377284383494 3.0813364422656893 3.72 4 255 top_left
+37.53057173545625 -71.20604085043414 2.3456607334660156 4.4503775531521335 3.72 4 255 bottom_right
+-64.66555855051553 114.37239216818591 4.0415974094072205 7.148274510511619 3.72 4 255 top_left
+-159.8739370090851 32.38357935976126 9.992121063067819 2.0239737099850785 3.72 4 255 top_left
+-5.049006526637299 5.487372656096312 4 255 square
+33.13144730165487 -54.491539456539584 2.0707154563534296 3.4057212160337245 3.72 4 255 bottom_right
+-78.0182361147649 -21.688655524373388 3.72 4 4.8761397571728065 255 left
+23.475149088239704 118.67606875867557 3.72 4 7.417254297417223 255 above
+60.04989312043256 83.66842540715709 3.753118320027035 5.229276587947318 3.72 4 255 top_right
+-78.9500444506312 146.46728205991332 4.93437777816445 9.154205128744582 3.72 4 255 top_left
+117.7142173838335 -50.10764215499546 7.357138586489595 3.1317276346872163 3.72 4 255 bottom_right
+-29.285229147593526 -76.88826063154511 1.8303268217245954 4.805516289471569 3.72 4 255 bottom_left
+-86.84012245363746 -9.897849309519387 3.72 4 5.427507653352341 255 left
+119.57722787074056 83.4033599412493 7.473576741921285 5.212709996328082 3.72 4 255 top_right
+94.50903012242438 -94.02186118571514 5.906814382651524 5.876366324107196 3.72 4 255 bottom_right
+33.603715644877326 65.94378905597196 2.100232227804833 4.121486815998248 3.72 4 255 top_right
+-41.78948367855642 -48.88272099378959 2.6118427299097764 3.0551700621118494 3.72 4 255 bottom_left
+91.03066460370553 -41.70602030255094 5.689416537731596 2.6066262689094337 3.72 4 255 bottom_right
+139.19179302727537 111.49433535420422 8.69948706420471 6.968395959637763 3.72 4 255 top_right
+-149.6812874503796 147.20028062658844 9.355080465648726 9.200017539161777 3.72 4 255 top_left
+-30.407311116876713 64.67794260765021 1.9004569448047945 4.042371412978138 3.72 4 255 top_left
+-50.169385538955 142.4500873807712 3.1355865961846874 8.9031304612982 3.72 4 255 top_left
+-144.48528008880257 83.03777749710093 9.03033000555016 5.189861093568808 3.72 4 255 top_left
+-109.32714385255775 -94.43626709842465 6.8329464907848605 5.902266693651541 3.72 4 255 bottom_left
+-92.61732308366028 149.6089769637694 5.788582692728768 9.350561060235588 3.72 4 255 top_left
+-20.765548593482237 94.45218235574245 3.72 4 5.903261397233903 255 above
+2.5091539053831013 -118.00902492520902 3.72 4 7.375564057825564 255 below
+71.34878500438987 -152.2417758748212 4.459299062774367 9.515110992176325 3.72 4 255 bottom_right
+54.75405453621829 -107.75207137164483 3.422128408513643 6.734504460727803 3.72 4 255 bottom_right
+116.76086918589317 139.58822061352828 7.297554324118323 8.724263788345517 3.72 4 255 top_right
+-106.01851766958099 -62.611515766121215 6.626157354348811 3.913219735382576 3.72 4 255 bottom_left
+13.066545804323994 -101.75815951322062 3.72 4 6.359884969576289 255 below
+57.71723430076412 77.28675311893838 3.6073271437977574 4.830422069933649 3.72 4 255 top_right
+-111.8968187124423 -146.27077748601698 6.9935511695276436 9.141923592876061 3.72 4 255 bottom_left
+76.28468685813408 -12.368001322970741 3.72 4 4.76779292863338 255 right
+32.243414222516805 -112.05692436109764 2.0152133889073003 7.003557772568603 3.72 4 255 bottom_right
+55.5262528817606 58.915585713414714 3.470390805110037 3.6822241070884196 3.72 4 255 top_right
+98.63936631959035 -16.528446362020503 3.72 4 6.164960394974397 255 right
+86.25436403466563 -124.81577726006918 5.390897752166602 7.800986078754323 3.72 4 255 bottom_right
+showpage
