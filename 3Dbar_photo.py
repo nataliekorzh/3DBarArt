@@ -69,7 +69,7 @@ def make_line(x, y, sw, color, function, m1 = 0, m2 = 0):
         return str(x) + " " + str(y) + " " + str(m1) + " " + str(m2) + " " + str(sw * 0.93) + " " + str(sw) + " " + str(color) + " " + function + "\n"
         
 def main():
-    fileName = 'me_bb.eps'
+    fileName = 'output.eps'
     rules = ""
     imageFile = sys.argv[1]
 
