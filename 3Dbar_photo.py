@@ -90,20 +90,13 @@ def main():
             for j in range(maxY):
                 x = sw + sw*j
                 y = sw + sw*(maxX-1-i)
-                if image[i][j] < 100:
-                    if image[i][j] < 75:
+                if image[i][j] < 100: #only print at pixels < 100
+                    if image[i][j] < 75: #fill in black for darkest pixels < 75
                         file.write(make_bars(sw*maxX, sw*maxY, x, y, 0))
                     else:
-                        file.write(make_bars(sw*maxX, sw*maxY, x, y, 255))
-                    #print((image[i][j]/255)/0.3)
+                        file.write(make_bars(sw*maxX, sw*maxY, x, y, 255)) #fill in white for pixels > 75
+                    
                     #file.write(make_bars(sw*maxX, sw*maxY, x, y, (image[i][j]/255)/0.3)) #for grey scale
-                    #file.write(make_bars(sw*maxX, sw*maxY, x, y, 255))
-                    #if on == 0:
-                    #    on = 255
-                    #elif on == 255:
-                    #    on = 0
-                #elif image[i][j] == 0:
-                    #file.write(make_bars(sw*maxX, sw*maxY, x, y, 0))
         file.write('showpage')
 
 main()
